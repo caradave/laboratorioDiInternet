@@ -20,9 +20,10 @@ do
     
     if [ "$S" -le 1480 ]
     then
+		risultato=$(echo "$RTTmin < $min" | bc)
     	v=$(echo "scale=2; (2*($S+54)*8) / ($RTTmin)" | bc)
     else
-        v=$(echo "scale=2; (2*(1.0392*$S-12)*8) / ($RTTmin-0.5)" | bc)
+        v=$(echo "scale=2; (2*(1.0392*$S-12)*8) / ($RTTmin-0.742)" | bc)
     fi
     
     echo $S" "$v >> velocita.dat

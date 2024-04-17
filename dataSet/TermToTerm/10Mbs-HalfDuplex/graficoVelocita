@@ -4,4 +4,4 @@ set ylabel "V [Mb/s]"
 set term png;
 set output "plotVel.png"
 
-plot "data.dat" using 1:2 title "Velocità" with linespoint
+plot "velocita.dat" using 1:2 title "Velocità" with linespoint
