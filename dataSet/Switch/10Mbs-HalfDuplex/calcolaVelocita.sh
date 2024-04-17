@@ -20,7 +20,7 @@ do
     then
     	v=$(echo "scale=2; (4*($S+54)*8) / ($RTTmin)" | bc)
     else
-        v=$(echo "scale=2; (16.627*$S+24320) / ($RTTmin-7.8)" | bc)
+        v=$(echo "scale=2; (16.627*$S+24320) / ($RTTmin-7.35)" | bc)
     fi
     
     echo $S" "$v >> velocita.dat
