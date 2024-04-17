@@ -1,7 +1,7 @@
 set xlabel "size S [bytes]"
-set ylabel "V [Mb/s]"
+set ylabel "velocita [bytes/ms]"
 
 set term png;
 set output "plotVel.png"
 
-plot "velocita.dat" using 1:2 title "Velocità" with linespoint
+plot "velocita.dat" using 1:2 title "vel" with linespoint

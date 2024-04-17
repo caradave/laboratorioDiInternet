@@ -16,14 +16,11 @@ do
     S=$(echo "$line" | cut -d " " -f 1)
     RTTmin=$(echo "$line" | cut -d " " -f 2)
     
-	min=5.2
-    
-    if [ "$S" -le 1480 ]
+    if [ $S -le 1480 ]
     then
-		risultato=$(echo "$RTTmin < $min" | bc)
-    	v=$(echo "scale=2; (2*($S+54)*8) / ($RTTmin) * 1000" | bc)
+    	v=$(echo "scale=2; (2*($S+54)*8) / ($RTTmin)" | bc)
     else
-        v=$(echo "scale=2; (2*(1.0392*$S-12)*8) / ($RTTmin-0.285) * 1000" | bc)
+        v=$(echo "scale=2; (2*(1.0392*($S-1)+72)*8) / ($RTTmin-0.72)" | bc)
     fi
     
     echo $S" "$v >> velocita.dat

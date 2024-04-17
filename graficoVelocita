@@ -1,5 +1,5 @@
 set xlabel "size S [bytes]"
-set ylabel "V [Mb/s]"
+set ylabel "V [Mb/ms]"
 
 set term png;
 set output "plotVel.png"
