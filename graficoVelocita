@@ -1,0 +1,7 @@
+set xlabel "size S [bytes]"
+set ylabel "V [Mb/ms]"
+
+set term png;
+set output "plotVel.png"
+
+plot "data.dat" using 1:2 title "Velocità" with linespoint
